@@ -1,22 +1,10 @@
 .main {
-    display: flex;
-    flex-direction: row;
+    width: 100%;
     height: 100%;
-}
-
-section {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    background-color: #1E201E;
-    border: #ECDFCC solid 4px;
-    padding: 20px;
-    text-align: center;
-
-    p {
-        margin: 20px;
-        font-size: 1.5em;
-    }
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes rotator {
@@ -42,59 +30,36 @@ section {
     }
 }
 
-#header {
-    width: 64%;
-    margin: 2.5vw 2.5vw 2.5vw 1.5vw;
-    border-radius: 3em;
+#timbre {
+    height: 30%;
+    animation: rotator 5s infinite;
+}
 
-    img {
-        margin-top: 5%;
-        height: 70%;
-        margin: 0px;
-        animation: rotator 12s infinite; 
+@keyframes fade {
+    0% {
+        transform: translateY(200px);
+        opacity: 0;
     }
 
-    h1 {
-        color: #888098;
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
     }
 }
 
-.content {
-    width: 33%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 2.5vw 2vw 2.5vw 0vw;
+#head{
+
+    animation: fade 5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
 }
 
-#top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 38.5vw;
-    margin-bottom: 0.75vw;
-    border-radius: 1em;
-    width: 100%;
-    background-color: #1E201E;
-    border: #ECDFCC solid 4px;
-
-    h1 {
-        color: #22AAA1;
-    }
-}
-
-#bottom {
-    height: 58.5vw;
-    margin-top: 0.75vw;
-    border-radius: 1em;
-    width: 100%;
-    background-color: #1E201E;
-    border: #ECDFCC solid 4px;
-
-    h1 {
-        color: #498467;
-    }
+#paragraph {
+    animation: fade 5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
 }
 
 #login_button {
@@ -106,6 +71,11 @@ section {
     border-radius: 60px;
     padding: 0px 10px 0px;
     border: black solid 4px;
+
+    animation: fade 5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
 
     p {
         font-family: arial;

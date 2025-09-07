@@ -65,9 +65,16 @@ select {
     }
 
     p {
-        margin: 0px 0px 0px 15px;
+        margin: 0px 0px 0px 10px;
         color: white;
         font-size: 1.4vw;
+    }
+
+    .subtitle {
+        font-weight: bold;
+        text-transform: capitalize;
+        font-style: tahoma;
+        font-size: 0.9vw;
     }
 }
 
@@ -87,20 +94,7 @@ a:hover {
         white-space: nowrap;
         overflow: hidden;
         margin-left: 10px;
-
-        p {
-            padding: 0px;
-            margin: 0px;
-        }
     }
-}
-
-.subtitle {
-    font-weight: bold;
-    text-transform: capitalize;
-    font-style: tahoma;
-    font-size: 0.9vw !important;
-    margin-top: 15px;
 }
 
 @keyframes scroll {
@@ -131,7 +125,7 @@ a:hover {
         font-size: 1.5em !important;
     }
 
-    .subtitle {
+    .card .subtitle {
         font-size: 1em !important;
     }
 }
