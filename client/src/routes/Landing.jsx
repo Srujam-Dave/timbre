@@ -79,22 +79,45 @@ const Landing = () => {
             return width;
         })();
 
-
         useEffect(() => {
-            const el = textRef.current;
-            if (!el) return;
+            const setScrollAnimation = () => {
+                // Measure on next frame to ensure layout is applied
+                requestAnimationFrame(() => {
+                    const el = textRef.current;
+                    if (!el) return;
 
-        // Measure on next frame to ensure layout is applied
-            requestAnimationFrame(() => {
-                setIsScrolling(el.scrollWidth > el.clientWidth);
-                setScrollWidth(el.scrollWidth);
-            });
+                    const textWidth = (() => {
+                        const el = document.createElement("span");
+                        el.innerText = text;
+                        el.style.visibility = "hidden";
+                        el.style.position = "absolute";
+                        el.style.whiteSpace = "pre";
+                        textRef.current?.appendChild(el);
+                        const width = el.getBoundingClientRect().width;
+                        textRef.current?.removeChild(el);
+                        return width;
+                    })();
 
+                    setIsScrolling(el.clientWidth < textWidth);
+                    setScrollWidth(textWidth);
+                });
+                console.log()
+            }
+
+            setScrollAnimation();
+
+            window.addEventListener("resize", setScrollAnimation);
+
+            return () => {
+                window.removeEventListener("resize", setScrollAnimation);
+            }
+            
         }, [text]);
 
+                    
         return (
             <p ref={textRef} style={{ '--textWidth': `${scrollWidth + spaceWidth}px` }} className={isScrolling ? styles.scrollAnimation : undefined}>
-                {text}{isScrolling && " | " + text}
+                    {text}{isScrolling ? " | " + text : ""}
             </p>
         );
     }

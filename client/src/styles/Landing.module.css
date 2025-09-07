@@ -67,20 +67,8 @@ select {
     p {
         margin: 0px 0px 0px 15px;
         color: white;
+        font-size: 1.4vw;
     }
-}
-
-@keyframes fade {
-    0% {
-        background-color: #1E201E;
-    }
-
-    100% {
-        background-color: gray;
-    }
-}
-
-a {
 }
 
 a:hover {
@@ -111,7 +99,7 @@ a:hover {
     font-weight: bold;
     text-transform: capitalize;
     font-style: tahoma;
-    font-size: 1em;
+    font-size: 0.9vw !important;
     margin-top: 15px;
 }
 
@@ -132,4 +120,18 @@ a:hover {
 .scrollAnimation {
     animation: scroll 10s infinite;
     z-index: 0;
+}
+
+@media all and (max-width: 800px) {
+    .card {
+        width: 100% !important;
+    }
+
+    .card p {
+        font-size: 1.5em !important;
+    }
+
+    .subtitle {
+        font-size: 1em !important;
+    }
 }
