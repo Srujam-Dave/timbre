@@ -1,0 +1,11 @@
+html, body, #root {
+    background-color: black;
+    color: #22AAA1;
+    height: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+p {
+    color: #ECDFCC;
+}

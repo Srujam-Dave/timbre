@@ -1,0 +1,135 @@
+header {
+    padding: 30px 0px 0px 30px;
+}
+
+#dash {
+    border-radius: 15px;
+    border: 0px;
+    background-color: black;
+    justify-content: left;
+}
+
+#selection {
+    width: 100%;
+    display: flex;
+    padding-left: 30px;
+}
+
+select {
+    box-shadow: none;
+    border: #1E201E solid 4px;
+    border-radius: 3px;
+    background-color: #888098;
+    font-size: 1.5em;
+    margin: 15px;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@keyframes fadein {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.card {
+    margin: 30px;
+    padding: 1rem;
+    gap: 1rem;
+    flex-direction: column;
+    width: 19%;
+    border-radius: 15px;
+    animation: fadein 1000ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    background-color: #1E201E;
+    text-align: left;
+    transition: background-color 0.4s ease; 
+    
+    img {
+        margin: 0px;
+        width: 100%;
+        border-radius: 15px;
+        aspect-ratio: 1;
+        object-fit: cover;
+    }
+
+    p {
+        margin: 0px 0px 0px 15px;
+        color: white;
+    }
+}
+
+@keyframes fade {
+    0% {
+        background-color: #1E201E;
+    }
+
+    100% {
+        background-color: gray;
+    }
+}
+
+a {
+}
+
+a:hover {
+    background-color: gray;
+}
+
+.cardText {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 50;
+
+    div {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-left: 10px;
+
+        p {
+            padding: 0px;
+            margin: 0px;
+        }
+    }
+}
+
+.subtitle {
+    font-weight: bold;
+    text-transform: capitalize;
+    font-style: tahoma;
+    font-size: 1em;
+    margin-top: 15px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+
+    25% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(calc(-1 * var(--textWidth)));
+    }
+}
+
+.scrollAnimation {
+    animation: scroll 10s infinite;
+    z-index: 0;
+}

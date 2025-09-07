@@ -1,0 +1,132 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1E201E;
+    border: #ECDFCC solid 4px;
+    padding: 20px;
+    text-align: center;
+
+    p {
+        margin: 20px;
+        font-size: 1.5em;
+    }
+}
+
+@keyframes rotator {
+    0% {
+        transform: rotate(-20deg) translateY(25px);
+    }
+
+    25% {
+        transform: rotate(-10) translateY(0);
+
+    }
+
+    50% {
+        transform: rotate(0deg) translateY(25px);
+    }
+
+    75% {
+        transform: rotate(-10) translateY(0);
+    }
+
+    100% {
+        transform: rotate(-20deg) translateY(25px);
+    }
+}
+
+#header {
+    width: 64%;
+    margin: 2.5vw 2.5vw 2.5vw 1.5vw;
+    border-radius: 3em;
+
+    img {
+        margin-top: 5%;
+        height: 70%;
+        margin: 0px;
+        animation: rotator 12s infinite; 
+    }
+
+    h1 {
+        color: #888098;
+    }
+}
+
+.content {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5vw 2vw 2.5vw 0vw;
+}
+
+#top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 38.5vw;
+    margin-bottom: 0.75vw;
+    border-radius: 1em;
+    width: 100%;
+    background-color: #1E201E;
+    border: #ECDFCC solid 4px;
+
+    h1 {
+        color: #22AAA1;
+    }
+}
+
+#bottom {
+    height: 58.5vw;
+    margin-top: 0.75vw;
+    border-radius: 1em;
+    width: 100%;
+    background-color: #1E201E;
+    border: #ECDFCC solid 4px;
+
+    h1 {
+        color: #498467;
+    }
+}
+
+#login_button {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #1ed760;
+    border-radius: 60px;
+    padding: 0px 10px 0px;
+    border: black solid 4px;
+
+    p {
+        font-family: arial;
+        font-weight: bold;
+        font-size: 1.5em;
+        margin: 0px 0px 0px 15px;
+        color: #000000;
+    }
+
+    img {
+        width: 225px;
+    }
+}
+
+#login_button:hover {
+    background-color: lightgreen;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    justify-content: center;
+    margin: 25px;
+}
