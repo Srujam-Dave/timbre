@@ -2,7 +2,7 @@
 
 This is a project I developed over the summer of 2025 to learn more about APIs and stack development. This project contains a web app that allows a user to log in with their Spotify Account, sending them to a page that displays their top artists and songs over various time periods. 
 
-The frontend of the app was built using React.js and the backend is powered by Express.js. I relied on the [Spotify Web API](https://developer.spotify.com/documentation/web-api) to retrive user information. 
+The frontend of the app was built using React.js and the backend is powered by Express.js. I relied on the [Spotify Web API](https://developer.spotify.com/documentation/web-api) to retrieve user information. 
 
 Unfortunately, due to constrains on the Spotify API, this app can't yet be published publicly.
 
